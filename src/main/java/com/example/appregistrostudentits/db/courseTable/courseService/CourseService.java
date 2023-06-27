@@ -1,7 +1,6 @@
-package com.example.appregistrostudentits.db.courseTable.course_service;
+package com.example.appregistrostudentits.db.courseTable.courseService;
 
 import com.example.appregistrostudentits.db.courseTable.CourseTable;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

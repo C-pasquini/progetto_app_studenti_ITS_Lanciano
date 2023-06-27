@@ -1,6 +1,6 @@
 package com.example.appregistrostudentits.db.courseTable;
 
-import com.example.appregistrostudentits.db.courseTable.course_service.CourseService;
+import com.example.appregistrostudentits.db.courseTable.courseService.CourseService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;

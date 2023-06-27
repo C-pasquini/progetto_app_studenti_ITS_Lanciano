@@ -1,4 +1,4 @@
-package com.example.appregistrostudentits.db.courseTable.course_service;
+package com.example.appregistrostudentits.db.courseTable.courseService;
 
 import com.example.appregistrostudentits.db.courseTable.CourseRepository;
 import com.example.appregistrostudentits.db.courseTable.CourseTable;
