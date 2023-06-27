@@ -1,5 +1,4 @@
-package com.example.appregistrostudentits.db.moduleTable;
-
+package com.example.appregistrostudentits.db.studentModuleVote;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,16 +11,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ModuleTable {
+public class StudentModuleVote {
     @Id
     @GeneratedValue
-    private long idModulo;
-
-    private String nomeModulo;
-    private String materia;
-    private int oreModulo;
-
     private long idVoto;
-    private long idDocente;
-    private long idCorso;
+    private int voto;
+
+    private long idModulo;  // Foreign key per i moduli
+    private long idStudente;    // Foreign key per gli studenti
 }

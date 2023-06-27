@@ -1,6 +1,8 @@
-package com.example.appregistrostudentits.db.teachersTable;
+package com.example.appregistrostudentits.db.teacherTable;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,6 +12,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class TeacherTable {
+    @Id
+    @GeneratedValue
     private long idDocente;
 
     private String Nome;
