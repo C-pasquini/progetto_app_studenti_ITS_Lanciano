@@ -1,7 +1,7 @@
 package com.example.appregistrostudentits.db.studentTable;
 
-import com.example.appregistrostudentits.db.moduleTable.ModuleTable;
-import com.example.appregistrostudentits.db.moduleTable.moduleService.ModuleService;
+
+import com.example.appregistrostudentits.db.studentTable.studentService.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;
@@ -10,37 +10,37 @@ import java.util.List;
 
 @RestController
 public class StudentController {
-    private final ModuleService moduleService;
+    private final StudentService studentService;
 
-    public StudentController(ModuleService moduleService) {
-        this.moduleService = moduleService;
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
-    @GetMapping("/modules")
-    public List<ModuleTable> getAllModules() {
-        return moduleService.getAllModules();
+    @GetMapping("/students")
+    public List<StudentTable> getAllStudents() {
+        return studentService.getAllStudents();
     }
 
-    @GetMapping("/modules/{id}")
-    public ModuleTable getModule(@PathVariable Long id){
-        return moduleService.getModule(id);
+    @GetMapping("/students/{id}")
+    public StudentTable getStudent(@PathVariable Long id){
+        return studentService.getStudent(id);
     }
 
-    @PostMapping("/modules")
-    public ModuleTable createModule(@RequestBody ModuleTable module){
-        return moduleService.createModule(module);
+    @PostMapping("/students")
+    public StudentTable createStudent(@RequestBody StudentTable student){
+        return studentService.createStudent(student);
     }
 
-    @PutMapping("/modules/{id}")
-    public ModuleTable updateModule(@PathVariable Long id, @RequestBody ModuleTable module){
-        if(!id.equals(module.getIdCorso())){
-            throw new HttpServerErrorException(HttpStatus.BAD_REQUEST, "Id in path does not match Id in Module object");
+    @PutMapping("/students/{id}")
+    public StudentTable updateStudent(@PathVariable Long id, @RequestBody StudentTable student){
+        if(!id.equals(student.getIdStudente())){
+            throw new HttpServerErrorException(HttpStatus.BAD_REQUEST, "Id in path does not match Id in Student object");
         }
-        return moduleService.updateModule(module);
+        return studentService.updateStudent(student);
     }
 
-    @DeleteMapping("/modules/{id}")
-    public void deleteModule(@PathVariable Long id) {
-        moduleService.deleteModule(id);
+    @DeleteMapping("/students/{id}")
+    public void deleteStudent(@PathVariable Long id) {
+        studentService.deleteStudent(id);
     }
 }
