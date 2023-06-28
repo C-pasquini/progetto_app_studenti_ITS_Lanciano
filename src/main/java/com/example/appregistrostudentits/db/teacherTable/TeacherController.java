@@ -1,6 +1,5 @@
 package com.example.appregistrostudentits.db.teacherTable;
 
-import com.example.appregistrostudentits.db.teacherTable.TeacherTable;
 import com.example.appregistrostudentits.db.teacherTable.teacherService.TeacherService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
