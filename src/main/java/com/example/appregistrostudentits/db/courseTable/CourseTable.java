@@ -15,7 +15,6 @@ public class CourseTable {
     @Id
     @GeneratedValue
     private long idCorso;
-
     private String nomeCorso;
     private String programma;
 }
