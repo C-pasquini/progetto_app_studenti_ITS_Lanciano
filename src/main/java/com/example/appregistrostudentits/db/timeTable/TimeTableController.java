@@ -28,7 +28,7 @@ public class TimeTableController {
 
     @PostMapping("/times")
     public TimeTable createTime(@RequestBody TimeTable time){
-        return timeService.createTime(time);
+        return timeTableService.createTimeTable(time);
     }
 
     @PutMapping("/times/{id}")
