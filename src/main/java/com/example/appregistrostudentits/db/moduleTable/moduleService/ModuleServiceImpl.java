@@ -2,6 +2,7 @@ package com.example.appregistrostudentits.db.moduleTable.moduleService;
 
 import com.example.appregistrostudentits.db.moduleTable.ModuleRepository;
 import com.example.appregistrostudentits.db.moduleTable.ModuleTable;
+import com.example.appregistrostudentits.db.studentModuleVote.StudentModuleVote;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,6 +28,11 @@ public class ModuleServiceImpl implements ModuleService {
     @Override
     public List<ModuleTable> getAllModules() {
         return moduleRepository.findAll();
+    }
+
+    @Override
+    public List<StudentModuleVote> getAllVotesByModule(Long id) {
+        return moduleRepository.getVotesByModule(id);
     }
 
     @Override

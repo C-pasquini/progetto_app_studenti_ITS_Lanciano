@@ -25,6 +25,10 @@ public class StudentController {
     public StudentTable getStudent(@PathVariable Long id){
         return studentService.getStudent(id);
     }
+    @GetMapping("/students/TassoAssenze/{id}")
+    public double getStudentFreq(@PathVariable Long id){
+        return studentService.getStudentFreq(id);
+    }
 
     @PostMapping("/students")
     public StudentTable createStudent(@RequestBody StudentTable student){

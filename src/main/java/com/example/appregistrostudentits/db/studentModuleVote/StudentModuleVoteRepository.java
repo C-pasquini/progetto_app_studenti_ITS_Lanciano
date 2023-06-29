@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StudentModuleVoteRepository extends JpaRepository<StudentModuleVote, Long> {
+    
 }

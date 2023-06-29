@@ -21,7 +21,6 @@ public class ModuleTable {
     private String materia;
     private int oreModulo;
 
-    private long idVoto;
     private long idDocente;
     private long idCorso;
 }

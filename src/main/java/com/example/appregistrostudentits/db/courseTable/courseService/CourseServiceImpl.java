@@ -2,6 +2,7 @@ package com.example.appregistrostudentits.db.courseTable.courseService;
 
 import com.example.appregistrostudentits.db.courseTable.CourseRepository;
 import com.example.appregistrostudentits.db.courseTable.CourseTable;
+import com.example.appregistrostudentits.db.moduleTable.ModuleTable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +23,9 @@ public class CourseServiceImpl implements CourseService{
     @Override
     public CourseTable getCourse(Long id) {
         return courseRepository.findById(id).orElseThrow();
+    }
+    public List<ModuleTable> getModulesByCourse(Long idCourse){
+        return courseRepository.getModulesByCourse(idCourse);
     }
 
     @Override

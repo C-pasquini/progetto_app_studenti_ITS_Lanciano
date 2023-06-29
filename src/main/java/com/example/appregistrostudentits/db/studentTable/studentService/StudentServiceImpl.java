@@ -30,6 +30,11 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public double getStudentFreq(Long id) {
+        return studentRepository.getStudnetFreq(id);
+    }
+
+    @Override
     public StudentTable updateStudent(StudentTable student) {
         return studentRepository.save(student);
     }

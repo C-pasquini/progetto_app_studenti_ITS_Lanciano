@@ -24,6 +24,4 @@ public class StudentTable {
     private LocalDate birthDate;
     private String residence;
     private double tassoAssenze;
-
-    private long idVoto; // Foreign key
 }
