@@ -23,6 +23,7 @@ public class StudentTable {
     private String surname;
     private LocalDate birthDate;
     private String residence;
+    private double tassoAssenze;
 
     private long idVoto; // Foreign key
 }
